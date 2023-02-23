@@ -29,6 +29,77 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+
+      <style>
+         #nav {
+             list-style: none inside;
+             margin: 0;
+             padding: 0;
+             text-align: center;
+         }
+ 
+         #nav li {
+             display: block;
+             position: relative;
+             float: left;
+             background: #6b7cdf;
+             /* menu background color */
+         }
+ 
+         #nav li a {
+             display: block;
+             padding: 0;
+             text-decoration: none;
+             width: 200px;
+             /* this is the width of the menu items */
+             line-height: 35px;
+             /* this is the hieght of the menu items */
+             color: #ffffff;
+             /* list item font color */
+         }
+ 
+         #nav li li a {
+             font-size: 80%;
+         }
+ 
+         /* smaller font size for sub menu items */
+ 
+         #nav li:hover {
+             background: #324bd8;
+         }
+ 
+         /* highlights current hovered list item and the parent list items when hovering over sub menues */
+ 
+         #nav ul {
+             position: absolute;
+             padding: 0;
+             left: 0;
+             display: none;
+             /* hides sublists */
+         }
+ 
+         #nav li:hover ul ul {
+             display: none;
+         }
+ 
+         /* hides sub-sublists */
+ 
+         #nav li:hover ul {
+             display: block;
+         }
+ 
+         /* shows sublist on hover */
+ 
+         #nav li li:hover ul {
+             display: block;
+             /* shows sub-sublist on hover */
+             margin-left: 200px;
+             /* this should be the same width as the parent list item */
+             margin-top: -35px;
+             /* aligns top of sub menu with top of list item */
+         }
+     </style>
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -50,31 +121,7 @@
       <header class="full_bg">
          <!-- header inner -->
          <div class="header">
-            <!-- <div class="menu-bar">
-               <img src="images/Logo.png"/ style="height:145px;width:150px;float:left;margin-top:-25px;">
-               <ul>
-                  <li > <a href="index.html">Home</a></li>
-                  <li> <a href="about.html"> About Us</a>
-                     
-               </li>
-                  <li class="data href="#">Services</a>
-                     <div class="sub-menu1">
-                        <ul>
-                           <li><a href="industrialtrading.html">Industrial Trading</a></li>
-                           <li><a href="steelfabrication.html">Steel Fabrication</a></li>
-                           <li><a href="civilconstruction.html">Civil Construction</a></li>
-                           <li><a href="oetcrane.html">EOT cranes</a></li>
-   
-   
-   
-                        </ul>
-                     </div>
-                  
-                  </li>
-                  <li> <a href="#">Contact Us</a></li>
-               </ul>
-    -->
-
+           
 
     <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
       <div class="container">   
@@ -86,7 +133,7 @@
           <i class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto"/ style="font-size: 20px;color: #8fb7ec; font-style:inherit;">
+          <ul id="nav">
             <li class="nav-item">
                 <a class="nav-link tm-nav-link current" href="index.html">Home</a>
             </li>
@@ -95,17 +142,13 @@
             </li>
 
             <li class="nav-item">
-               <a class="nav-link tm-nav-link"  href="civilconstruction.html">Services</a>
-
-               <!-- <div class="nav-item1">
-                  <ul>
-                     <li><a href="industrialtrading.html">Industrial Trading</a></li>
-                     <li><a href="steelfabrication.html">Steel Fabrication</a></li>
-                     <li><a href="civilconstruction.html">Civil Construction</a></li>
-                     <li><a href="oetcrane.html">EOT cranes</a></li>
-                  </ul>
-               </div> -->
-
+               <a class="nav-link tm-nav-link"  href="#">Services</a>
+               <ul>
+                  <li><a href="industrialtrading.html">Industrial Trading</a></li>
+                  <li><a href="steelfabrication.html">Steel Fabrication</a></li>
+                  <li><a href="civilconstruction.html">Civil Construction</a></li>
+                  <li><a href="oetcrane.html">EOT cranes</a></li>
+               </ul>
 
            </li> 
             <li class="nav-item">
@@ -265,7 +308,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-10 offset-md-1">
-                        <p>Copyright 2023  All Right Reserved By <a href="https://html.design/">@Bahjat Andaam Trad</a></p>
+                        <p>Copyright 2023  All Right Reserved By <a href="#">@Bahjat Andaam Trad</a></p>
                      </div>
                   </div>
                </div>
